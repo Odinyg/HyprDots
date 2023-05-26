@@ -1,0 +1,29 @@
+alias vim="nvim"
+alias dcpshow="docker ps --format '{{.Names}}'\t'{{.Ports}}'"
+alias zshconf="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias mybind="nvim ~/.conf/sxhkd/sxhkdrc"
+alias e="sudo nvim"
+alias v="nvim"
+alias vim="nvim"
+alias nvimconf='nvim ~/.config/nvim/init.vim'
+alias sshmain='ssh -Y $server'
+alias zshconf='nvim ~/.zshrc'
+alias wmconf='nvim ~/.config/bspwm/bspwmrc'
+alias bindconf='nvim ~/.config/sxhkd/sxhkdrc'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ...."cd ../../.."
+alias v="nvim"
+alias grep='grep --color=auto'
+alias update='sudo pacman -Syu'
+alias la='ls -a'
+alias ll='ls -la'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias dots='/usr/bin/git --git-dir=$HOME/dotfile --work-tree=$HOME'
+alias gitaa= 'git add *'
+alias gita= 'git add'
+alias gits= 'git status -s'
+alias workvpn="sudo openvpn --compat-mode 2.4.9 --config ~/.vpn/workvpn.ovpn --auth-user-pass ~/.vpn/.pass.txt"
