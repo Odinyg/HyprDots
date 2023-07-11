@@ -1,6 +1,6 @@
 {
   "layer": "top",
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["custom/arch", "wlr/workspaces", "tray"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "clock", "battery"],
     "custom/arch": {
@@ -24,9 +24,9 @@
         "4": "4",
         "5": "5",
         "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
+        "7": "󰇮",
+        "8": "",
+        "9": "",
         "0": "0",
 	}
     },
@@ -64,10 +64,38 @@
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
       "format-charging": "<span color='#b4befe'></span> {capacity}%",
+      "states": {
+          "warning": 30,
+          "critical": 15
+    },
       "tooltip": false,
     },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
     "clock": {
-      "format": "<span color='#b4befe'>  </span>{:%H:%M}",
+      "format": "<span color='#b4befe'>  </span>{:%d-%m  %H:%M}",      
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+                  "mode"          : "month",
+                  "mode-mon-col"  : 3,
+                  "weeks-pos"     : "left",
+                  "on-scroll"     : 1,
+                  "format": {
+                            "months":     "<span color='#ffead3'><b>{}</b></span>",
+                            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                            }
+                  },
+      "actions":  {
+                  "on-click-right": "mode",
+                  "on-click": "mode",
+                  "on-scroll-up": "shift_up",
+                  "on-scroll-down": "shift_down"
+                  }
     },
     "hyprland/window": {
         "format": "{}"
