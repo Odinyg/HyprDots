@@ -26,4 +26,4 @@ alias dots='/usr/bin/git --git-dir=$HOME/dotfile --work-tree=$HOME'
 alias gitaa= 'git add *'
 alias gita= 'git add'
 alias gits= 'git status -s'
-alias workvpn="sudo openvpn --compat-mode 2.4.9 --config ~/.vpn/workvpn.ovpn --auth-user-pass ~/.vpn/.pass.txt"
+alias workvpn="sudo openvpn --compat-mode 2.4.9 --config $workvpn --auth-user-pass $workvpnpass"
